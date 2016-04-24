@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="utf-8" />
@@ -15,30 +15,46 @@
         </header>
         <nav id="main_nav">
             <ul>
-                <li>О ПРОЕКТЕ</li>
-                <li>ГЛАВНАЯ</li>
+                <li><a href="#">О ПРОЕКТЕ</a></li>
+                <li><a href="#">ГЛАВНАЯ</a></li>
             </ul>
         </nav>
         <div id="container">
             <section id="main_section">
                 <article>
                     <header>
-                        <h3>Заголовок первой записи</h3>
+                        <h3><a href="#">Заголовок первой записи</a></h3>
                     </header>
                     <p>Тестовый тест, проверка, и ещё раз проверка номер два. Тестовый тест, проверка, и ещё раз проверка номер два. Тестовый тест, проверка, и ещё раз проверка номер два. Тестовый тест, проверка, и ещё раз проверка номер два. Тестовый тест, проверка, и ещё раз проверка номер два. Тестовый тест, проверка, и ещё раз проверка номер два. Тестовый тест, проверка, и ещё раз проверка номер два. Тестовый тест, проверка, и ещё раз проверка номер два. ...</p>
                     <footer>
-                        <time datetime="2016-04-24" pubdate>Опубликовано 2016-04-24 18:45</time>
+                        <time datetime="2016-04-24" pubdate>Опубликованл <a href="email:admin@obj.kgdnet.ru">admin</a> 2016-04-24 18:45</time>
                     </footer>
                 </article>
                 <article>
                     <header>
-                        <h3>Заголовок второй записи</h3>
+                        <h3><a href="#">Заголовок второй записи</a></h3>
                     </header>
                     <p>Тестовый тест, проверка, и ещё раз проверка номер два. Тестовый тест, проверка, и ещё раз проверка номер два. Тестовый тест, проверка, и ещё раз проверка номер два. Тестовый тест, проверка, и ещё раз проверка номер два. Тестовый тест, проверка, и ещё раз проверка номер два. Тестовый тест, проверка, и ещё раз проверка номер два. Тестовый тест, проверка, и ещё раз проверка номер два. Тестовый тест, проверка, и ещё раз проверка номер два. ...</p>
                     <footer>
-                        <time datetime="2016-04-24" pubdate>Опубликовано 2016-04-24 18:30</time>
+                        <time datetime="2016-04-24" pubdate>Опубликовал <a href="email:admin@obj.kgdnet.ru">admin</a> 2016-04-24 18:30</time>
                     </footer>
                 </article>                
+            </section>
+            <section>
+                <form>
+                    <fieldset>
+                        <legend>Оставить свой отзыв:</legend>
+                        <p>
+                            <label for="title">Заголовок записи:</label><input type="text" name="title">
+                            <label for="nickname">Ник:</label><input type="text" name="nickname">
+                        </p>
+                        <p>
+                            <label for="email">Почта:</label><input type="email" name="email">
+                        </p>
+                        <textarea name="text" cols="80" rows="10" placeholder="Оставить отзыв тут."></textarea>
+                    </fieldset>
+                    <p><input type="submit" value="Отправить"><input type="reset" value="Очистить"></p>
+                </form>
             </section>
         </div>
         <footer>
