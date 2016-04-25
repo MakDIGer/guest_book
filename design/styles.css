@@ -3,4 +3,174 @@
     padding: 0px 0px;
 }
 
-/* Заполнить таблицу стилей */
+header nav section article footer {
+    display: block;
+}
+
+body {
+    width: 100%;
+    background-color: #eeeeee;
+
+    display: -o-box;
+    display: -webkit-box;
+    display: -moz-box;
+
+    -o-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-box-pack: center;
+}
+
+a:link {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:active {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+#wrapper {
+	margin: 15px 0px;
+    max-width: 960px;
+
+    display: -o-box;
+    display: -webkit-box;
+    display: -moz-box;
+
+    -o-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+
+    -o-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+}
+
+#main_header {
+    border-bottom: 1px solid #000000;
+    font: bold 24px verdana, sans-serif;
+    padding: 30px;
+}
+
+#main_header h2 {
+    font-size: 20px;
+}
+
+#main_nav {
+    font: bold 18px impact;
+    text-align: right;
+}
+
+#main_nav li {
+    display: inline-block;
+    list-style: none;
+    margin: 5px 0px 5px 10px;
+    padding: 0px 0px 0px 5px;
+    border-left: 1px solid #000000;
+}
+
+#main_section {
+    margin: 5px 5px;
+    padding: 10px 10px;
+}
+
+#main_section h3 {
+    font: bold 18px courier;
+    text-align: left;
+}
+
+#main_section p {
+    text-align: justify;
+    font: 16px courier;
+}
+
+article {
+    margin: 5px 0px;
+    padding: 5px 0px;
+}
+
+article footer {
+    text-align: left;
+    font-size: 14px;
+}
+
+#otziv {
+    width: 100%;
+    border-top: 1px solid #000000;
+    padding: 15px 0px 0px 0px;
+
+    display: -o-box;
+    display: -moz-box;
+    display: -webkit-box;
+
+    -o-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-box-pack: center;
+}
+
+#otziv form {
+    max-width: 600px;
+    font: 16px verdana, sans-serif;
+    text-align: center;
+
+    -o-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+}
+
+#otziv fieldset {
+    margin: 5px 0px;
+    padding: 10px 10px;
+}
+
+#bigbox {
+    width: 100%;
+
+    display: -o-box;
+    display: -moz-box;
+    display: -webkit-box;
+
+    -o-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-box-orient: horizontal;
+
+    -o-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-box-pack: center;
+}
+
+#box1 {
+	margin: 10px 0px 10px 10px;
+	padding: 5px 5px 5px 0px;
+	width: 200px;
+	text-align: right;
+    width: 200px;
+}
+
+#box2 {
+	margin: 10px 0px 10px 10px;
+	padding: 5px 5px 5px 0px;
+	text-align: left;
+
+    -o-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+}
+
+#main_footer {
+    margin: 10px 0px;
+    padding: 5px 0px;
+    font: 12px verdana, sans-serif;
+    text-align: center;
+}
