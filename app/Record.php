@@ -38,13 +38,20 @@ class Record
 
     public function __destruct()
     {
-        mysqli_close($this->link);
+        $this->link->close();
     }
 
     public function queryData($query)
     {
-        $resultat = mysqli_query($this->link, $query);
-        return $resultat;
+        $this->link->query('SET NAMES utf8');
+        $resultat = $this->link->query($query);
+        // TODO: Написать добавление данных в массив;
+        $this->resultat = Array();
+
+        while ($row = mysqli_fetch_array($resultat))
+        {
+            $this->resultat[] = $row;
+        }
     }
     
     public function addRecord($title, $text, $nickname, $email, $datepost, $timepost)
@@ -60,5 +67,6 @@ class Record
     public function getRecords($number_page)
     {
         //TODO:Написать функцию извлечения группы записей из бд по номеру страниц;
+        $this->queryData('SELECT * FROM records ORDER BY id DESC');
     }
 }
