@@ -11,11 +11,6 @@ namespace app;
 
 class Record
 {
-    const LOCALHOST = 'localhost';
-    const DATABASE = 'guest_book';
-    const USER = 'root';
-    const PASS = 'mak2526669';
-
     public $title;
     public $text;
     public $nickname;
@@ -26,30 +21,26 @@ class Record
 
     private $link;
 
-    public function __construct()
+    public function __construct($localhost, $database, $user, $pass)
     {
-        $this->link = new \mysqli(Record::LOCALHOST, Record::USER, Record::PASS, Record::DATABASE);
-
-        if (!$this->link)
-        {
-            echo "Ошибка подключения к бд";
-        }
+        $dsn = 'mysql:host='.$localhost.';dbname='.$database.';charset=utf8;';
+        $opt = array(
+            \PDO::ATTR_ERRMODE            => \PDO::ERRMODE_EXCEPTION,
+            \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC
+        );
+        $this->link = new \PDO($dsn, $user, $pass, $opt);
     }
 
     public function __destruct()
     {
-        $this->link->close();
+        $this->link = null;
     }
 
     public function queryData($query)
     {
-        $this->link->query('SET NAMES utf8');
         $resultat = $this->link->query($query);
-        // TODO: Написать добавление данных в массив;
-        $this->resultat = Array();
 
-        while ($row = mysqli_fetch_array($resultat))
-        {
+        while ($row = $resultat->fetch()) {
             $this->resultat[] = $row;
         }
     }
@@ -62,6 +53,7 @@ class Record
     public function getRecord($number_rec)
     {
         //TODO:Написать функцию извлечения одной записи из БД;
+        $this->queryData('SELECT * FROM records WHERE `id`='.$number_rec);
     }
 
     public function getRecords($number_page)

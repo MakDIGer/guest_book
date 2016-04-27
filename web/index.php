@@ -10,7 +10,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../app/Record.php';
 
-$record = new \app\Record();
+$record = new \app\Record('localhost', 'guest_book', 'root', 'mak2526669');
 
 $p = isset($_GET['p']) ? htmlspecialchars($_GET['p']) : 'records';
 $pp = isset($_GET['pp']) ? htmlspecialchars(($_GET['pp'])) : '1';
@@ -18,6 +18,10 @@ $pp = isset($_GET['pp']) ? htmlspecialchars(($_GET['pp'])) : '1';
 switch ($p) {
     case 'records':
         $record->getRecords($pp);
+        break;
+    case 'record':
+        $record->getRecord($pp);
+        $p = 'records';
         break;
     default :
         $record->getRecords('1');
