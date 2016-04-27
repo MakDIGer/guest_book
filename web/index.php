@@ -29,4 +29,4 @@ $twig = new Twig_Environment($loader, array(
     'cache' => __DIR__ . '/../view/compilation_cache',
 ));
 
-echo $twig->render($p.'.tpl');
+echo $twig->render($p.'.tpl', array('items' => $record->resultat));
