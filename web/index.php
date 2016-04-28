@@ -21,7 +21,6 @@ switch ($p) {
         break;
     case 'record':
         $record->getRecord($pp);
-        $p = 'records';
         break;
     default :
         $record->getRecords('1');
