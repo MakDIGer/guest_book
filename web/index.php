@@ -22,6 +22,11 @@ switch ($p) {
     case 'record':
         $record->getRecord($pp);
         break;
+    case 'addRecord':
+        $record->addRecord(htmlspecialchars($_POST['title']), htmlspecialchars($_POST['text']),
+            htmlspecialchars($_POST['nickname']), htmlspecialchars($_POST['email']));
+        $p = 'resultat';
+        break;
     default :
         $record->getRecords('1');
         break;
